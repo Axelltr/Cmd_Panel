@@ -1,10 +1,5 @@
-#declaration des variables pour les commandes
-ic = "ipconfig/all"
-irl = "ipconfig/release"
-irn = "ipconfig/renew"
-sysinfo = "systeminfo"
-osver = "ver"
-clear = "cls"
-varenv = "set"
-check = "chkdsk"
-processlist = "tasklist"
+#importation des modules necessaires
+import os
+import time
+import sys
+import colorama
