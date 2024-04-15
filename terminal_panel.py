@@ -1,4 +1,3 @@
-#conditions pour les commandes en fonction des choix pour le menu IP
 if choix == "i":
     print(colorama.Fore.BLUE + ipoption)
     print("Select an option")
@@ -13,10 +12,9 @@ if choix == "i":
         os.system(irn)
         time.sleep(10)
     if choix2 == "q":
-        quit()
+        exitpanel()
     if choix2 == "m":
-        print(colorama.Fore.GREEN + mainoption)
-        choix = input()
+        startpanel()
 
 #conditions pour les commandes en fonction des choix pour le menu systeme
 if choix == "s":
@@ -33,10 +31,9 @@ if choix == "s":
         os.system(varenv)
         time.sleep(10)
     if choix3 == "q":
-        quit()
+        exitpanel()
     if choix3 == "m":
-        print(colorama.Fore.GREEN + mainoption)
-        choix = input()
+        startpanel()
 
 #conditions pour les commandes en fonction des choix pour le menu fixing
 if choix == "f":
@@ -48,20 +45,28 @@ if choix == "f":
         time.sleep(10)
     if choix4 == "pl": 
         os.system(processlist)
-        time.sleep(30)
-        if choix4 == "q":
-            quit()
-        if choix4 == "m":
-            print(colorama.Fore.GREEN + mainoption)
-            choix = input()
+        print("You want to kill a process ? Yes/No")
+        choix5 = input()
+        if choix5 == "Yes":
+            print("Enter the name of the task")
+            task = input()
+            os.system(killprocess + task)
+            exitpanel()
+    if choix4 == "pk":
+        print("Enter the name of the task")
+        task = input()
+        os.system(killprocess + task)
+    if choix4 == "q":
+            exitpanel()
+    if choix4 == "m":
+            startpanel()
 
 #condition pour nettoyer le terminal au menu principal
 if choix == "c":
     os.system(clear)
-    print(colorama.Fore.GREEN + mainoption)
-    choix = input()
+    startpanel()
 
 #condition pour quitter le programme au menu principal
 if choix == "q":
-    quit()
+    exitpanel()
         
