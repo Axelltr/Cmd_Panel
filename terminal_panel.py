@@ -25,6 +25,7 @@ sysoption = """
 fixoption = """"
     [cd] Check State Of Disk
     [pl] List Of Processus
+    [pk] Kill Processus By Name
     [q] Quit Terminal Panel
     [m] Return To Terminal Panel Menu
 """
