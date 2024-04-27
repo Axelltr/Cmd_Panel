@@ -1,4 +1,4 @@
-if choix == "i":
+if choix == "n":
     print(colorama.Fore.BLUE + ipoption)
     print("Select an option")
     choix2 = input()
@@ -11,6 +11,11 @@ if choix == "i":
             time.sleep(10)
         case "in":
             os.system(irn)
+            time.sleep(10)
+        case "cn": 
+            print("enter the name of website")
+            name = input()
+            os.system(checksite + name)
             time.sleep(10)
         case "q":
             exitpanel()
