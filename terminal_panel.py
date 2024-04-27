@@ -1,6 +1,6 @@
 #creation des menus
 mainoption = """
-    [i] Ip Tools
+    [n] Network Tools
     [s] System Tools
     [f] Fixing Tools
     [c] Clear Terminal
@@ -11,6 +11,7 @@ ipoption = """
     [ic] Ip Config All
     [ir] Ip Realease For DHCP
     [in] Ip Renew For DHCP
+    [cn] Check Server Name Of Website
     [q] Quit Terminal Panel
     [m] Return To Terminal Panel Menu
 """
