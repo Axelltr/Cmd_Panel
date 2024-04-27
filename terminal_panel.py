@@ -10,7 +10,7 @@ print(colorama.Fore.RED + "Select an option")
 
 #creation des menus
 mainoption = """
-    [i] Ip Tools
+    [n] Network Tools
     [s] System Tools
     [f] Fixing Tools
     [c] Clear Terminal
@@ -21,6 +21,7 @@ ipoption = """
     [ic] Ip Config All
     [ir] Ip Realease For DHCP
     [in] Ip Renew For DHCP
+    [cn] Check Server Name Of Website
     [q] Quit Terminal Panel
     [m] Return To Terminal Panel Menu
 """
@@ -51,6 +52,7 @@ varenv = "set"
 check = "chkdsk"
 processlist = "tasklist"
 killprocess = "taskkill /IM "
+checksite = "nslookup"
 
 #fonction pour quitter le programme
 def exitpanel():
@@ -68,7 +70,7 @@ def startpanel():
 startpanel()
 
 #conditions pour les commandes en fonction des choix pour le menu IP
-if choix == "i":
+if choix == "n":
     print(colorama.Fore.BLUE + ipoption)
     print("Select an option")
     choix2 = input()
@@ -81,6 +83,11 @@ if choix == "i":
             time.sleep(10)
         case "in":
             os.system(irn)
+            time.sleep(10)
+        case "cn": 
+            print("enter the name of website")
+            name = input()
+            os.system(checksite + name)
             time.sleep(10)
         case "q":
             exitpanel()
