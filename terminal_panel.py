@@ -4,10 +4,6 @@ import time
 import sys
 import colorama
 
-#message d'acceuil
-print(colorama.Fore.RED + "*** Welcome to terminal panel !***")
-print(colorama.Fore.RED + "Select an option")
-
 #creation des menus
 mainoption = """
     [n] Network Tools
@@ -56,12 +52,14 @@ checksite = "nslookup"
 
 #fonction pour quitter le programme
 def exitpanel():
-    print("Bye Bye !")
+    print(colorama.Fore.WHITE + "Bye Bye !")
     time.sleep(3)
     quit()
 
 #fonction pour afficher le menu principal
 def startpanel():
+    print(colorama.Fore.RED + "*** Welcome to terminal panel !***")
+    print(colorama.Fore.RED + "Select an option")
     print(colorama.Fore.GREEN + mainoption)
     global choix
     choix = input()
@@ -78,17 +76,21 @@ if choix == "n":
         case "ic":
             os.system(ic)
             time.sleep(10)
+            startpanel()
         case "ir":
             os.system(irl)
             time.sleep(10)
+            startpanel()
         case "in":
             os.system(irn)
             time.sleep(10)
+            startpanel()
         case "cn": 
             print("enter the name of website")
             name = input()
             os.system(checksite + name)
             time.sleep(10)
+            startpanel()
         case "q":
             exitpanel()
         case "m":
@@ -103,16 +105,19 @@ if choix == "s":
         case "ov":
             os.system(osver)
             time.sleep(10)
+            startpanel()
         case "si":
             os.system(sysinfo)
             time.sleep(10)
+            startpanel()
         case "ev":
             os.system(varenv)
             time.sleep(10)
+            startpanel()
         case "q":
             exitpanel()
         case "m":
-            startpanel
+            startpanel()
 
 #conditions pour les commandes en fonction des choix pour le menu fixing
 if choix == "f":
@@ -123,6 +128,7 @@ if choix == "f":
         case "cd":
             os.system(check)
             time.sleep(10)
+            startpanel()
         case "pl":
             os.system(processlist)
             print("You want to kill a process ? Yes/No")
@@ -131,11 +137,12 @@ if choix == "f":
                 print("Enter the name of the task")
                 task = input()
                 os.system(killprocess + task)
-                exitpanel()
+                startpanel()
         case "pk":
             print("Enter the name of the task")
             task = input()
             os.system(killprocess + task) 
+            startpanel()
         case "q":
             exitpanel()
         case "m":
