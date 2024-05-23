@@ -1,3 +1,4 @@
+#conditions pour les commandes en fonction des choix pour le menu IP
 if choix == "n":
     print(colorama.Fore.BLUE + ipoption)
     print("Select an option")
@@ -6,17 +7,21 @@ if choix == "n":
         case "ic":
             os.system(ic)
             time.sleep(10)
+            startpanel()
         case "ir":
             os.system(irl)
             time.sleep(10)
+            startpanel()
         case "in":
             os.system(irn)
             time.sleep(10)
+            startpanel()
         case "cn": 
             print("enter the name of website")
             name = input()
             os.system(checksite + name)
             time.sleep(10)
+            startpanel()
         case "q":
             exitpanel()
         case "m":
@@ -31,16 +36,19 @@ if choix == "s":
         case "ov":
             os.system(osver)
             time.sleep(10)
+            startpanel()
         case "si":
             os.system(sysinfo)
             time.sleep(10)
+            startpanel()
         case "ev":
             os.system(varenv)
             time.sleep(10)
+            startpanel()
         case "q":
             exitpanel()
         case "m":
-            startpanel
+            startpanel()
 
 #conditions pour les commandes en fonction des choix pour le menu fixing
 if choix == "f":
@@ -51,6 +59,7 @@ if choix == "f":
         case "cd":
             os.system(check)
             time.sleep(10)
+            startpanel()
         case "pl":
             os.system(processlist)
             print("You want to kill a process ? Yes/No")
@@ -59,11 +68,12 @@ if choix == "f":
                 print("Enter the name of the task")
                 task = input()
                 os.system(killprocess + task)
-                exitpanel()
+                startpanel()
         case "pk":
             print("Enter the name of the task")
             task = input()
             os.system(killprocess + task) 
+            startpanel()
         case "q":
             exitpanel()
         case "m":
@@ -77,3 +87,4 @@ if choix == "c":
 #condition pour quitter le programme au menu principal
 if choix == "q":
     exitpanel()
+        
